@@ -2,6 +2,10 @@
 
 An MCP (Model Context Protocol) server implementation that enhances AI model capabilities with structured, retrieval-augmented thinking processes. This server enables dynamic thought chains, parallel exploration paths, and recursive refinement cycles for improved reasoning and problem-solving.
 
+<a href="https://glama.ai/mcp/servers/d86f2s9wmm">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/d86f2s9wmm/badge" alt="Retrieval-Augmented Thinking Server MCP server" />
+</a>
+
 ## Features
 
 - **Adaptive Thought Chains**: Maintains coherent reasoning flows with branching and revision capabilities
