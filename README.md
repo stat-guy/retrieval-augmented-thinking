@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/stat-guy-retrieval-augmented-thinking-badge.png)](https://mseep.ai/app/stat-guy-retrieval-augmented-thinking)
+
 # Retrieval-Augmented Thinking MCP Server
 
 An MCP (Model Context Protocol) server implementation that enhances AI model capabilities with structured, retrieval-augmented thinking processes. This server enables dynamic thought chains, parallel exploration paths, and recursive refinement cycles for improved reasoning and problem-solving.
