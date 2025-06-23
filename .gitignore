@@ -3,6 +3,7 @@ node_modules/
 
 # Build output
 dist/
+build/
 
 # IDE files
 .vscode/
@@ -18,6 +19,7 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
 # Environment variables
 .env
@@ -38,3 +40,6 @@ yarn-error.log*
 
 # Yarn Integrity file
 .yarn-integrity
+
+# TypeScript
+*.tsbuildinfo
