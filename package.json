@@ -1,27 +1,21 @@
 {
-  "name": "mcp-retrieval-augmented-thinking",
-  "version": "1.0.0",
-  "description": "MCP server for retrieval augmented thinking and problem solving with Chain of Draft reasoning",
+  "name": "mcp-server-rat-node",
+  "version": "0.1.0",
+  "description": "Retrieval Augmented Thinking MCP Server - Node.js implementation",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
+    "build": "echo 'No build needed for pure JS'",
     "test": "node test.js"
   },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.6.1",
-    "openai": "^4.96.0",
-    "axios": "^1.8.3",
-    "dotenv": "^16.4.7"
+  "bin": {
+    "mcp-server-rat-node": "./index.js"
   },
-  "keywords": [
-    "mcp",
-    "model-context-protocol",
-    "retrieval-augmented-thinking",
-    "chain-of-draft",
-    "reasoning",
-    "ai"
-  ],
-  "author": "stat-guy",
-  "license": "MIT"
+  "keywords": ["mcp", "thinking", "reasoning", "ai"],
+  "author": "User",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.3"
+  }
 }
