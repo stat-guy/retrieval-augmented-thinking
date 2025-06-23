@@ -4,8 +4,16 @@ Retrieval Augmented Thinking MCP Server - A reasoning tool that processes struct
 
 ## Installation
 
+### Primary Method (Recommended)
 ```bash
-npm install mcp-server-rat-node
+npm install -g git+https://github.com/stat-guy/retrieval-augmented-thinking.git
+```
+
+### Alternative Method
+```bash
+git clone https://github.com/stat-guy/retrieval-augmented-thinking.git
+cd retrieval-augmented-thinking
+npm install -g .
 ```
 
 ## Claude Desktop Configuration
@@ -96,6 +104,20 @@ The server provides a single `rat` tool for processing structured thoughts:
   "next_thought_needed": true,
   "visual_output": "┌─ 💭 Thought 1/3 ─────────────────┐\\n│ Analysis shows clear patterns... │\\n├─ Metrics ──────────────────────┤\\n│ Quality: 0.64 | Impact: 0.29... │\\n└─────────────────────────────────┘"
 }
+```
+
+## Troubleshooting
+
+### Installation Issues
+If you encounter `ENOENT` errors during installation:
+1. Ensure you have Node.js and npm installed
+2. Try the alternative installation method using `git clone`
+3. Check that you have internet access for GitHub downloads
+
+### Verification
+After installation, verify it works:
+```bash
+npx mcp-server-rat-node --help
 ```
 
 ## Testing
