@@ -7,8 +7,17 @@
 A context-aware reasoning system that orchestrates structured thought processes through dynamic trajectories. Implements iterative hypothesis generation and validation cycles while preserving context coherence across non-linear reasoning paths.
 
 ## Installation
+
+### Primary Method (Recommended)
 ```bash
-npm install -g /Users/folder location/rat-mcp/node-version
+npm install -g git+https://github.com/stat-guy/retrieval-augmented-thinking.git
+```
+
+### Alternative Method
+```bash
+git clone https://github.com/stat-guy/retrieval-augmented-thinking.git
+cd retrieval-augmented-thinking
+npm install -g .
 ```
 
 ## Claude Desktop Configuration
@@ -17,7 +26,8 @@ Add to `claude_desktop_config.json`:
 {
   "mcpServers": {
     "rat": {
-      "command": "mcp-server-rat-node"
+      "command": "npx",
+      "args": ["mcp-server-rat-node"]
     }
   }
 }
