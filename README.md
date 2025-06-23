@@ -94,7 +94,7 @@ The server provides a single `rat` tool for processing structured thoughts:
     "chain_effectiveness": 0.145
   },
   "next_thought_needed": true,
-  "visual_output": "┌─ 💭 Thought 1/3 ─────────────────┐\n│ Analysis shows clear patterns... │\n├─ Metrics ──────────────────────┤\n│ Quality: 0.64 | Impact: 0.29... │\n└─────────────────────────────────┘"
+  "visual_output": "┌─ 💭 Thought 1/3 ─────────────────┐\\n│ Analysis shows clear patterns... │\\n├─ Metrics ──────────────────────┤\\n│ Quality: 0.64 | Impact: 0.29... │\\n└─────────────────────────────────┘"
 }
 ```
 
@@ -114,4 +114,4 @@ node test-tool.js
 
 ## License
 
-MIT
+This MCP server is licensed under the MIT License. This means you are free to use, modify, and distribute the software, subject to the terms and conditions of the MIT License. For more details, please see the LICENSE file in the project repository.
