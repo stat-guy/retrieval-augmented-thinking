@@ -1,0 +1,21 @@
+{
+  "name": "mcp-server-rat-node",
+  "version": "0.1.0",
+  "description": "Retrieval Augmented Thinking MCP Server - Node.js implementation",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo 'No build needed for pure JS'",
+    "test": "node test.js"
+  },
+  "bin": {
+    "mcp-server-rat-node": "./index.js"
+  },
+  "keywords": ["mcp", "thinking", "reasoning", "ai"],
+  "author": "User",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.3"
+  }
+}
