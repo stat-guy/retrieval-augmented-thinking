@@ -1,50 +1,27 @@
 {
-  "name": "@modelcontextprotocol/server-retrieval-augmented-thinking",
-  "version": "0.1.0",
-  "description": "MCP server for retrieval augmented thinking and problem solving",
-  "license": "MIT",
-  "type": "module",
-  "bin": {
-    "mcp-server-retrieval-augmented-thinking": "dist/index.js"
-  },
-  "files": [
-    "dist"
-  ],
+  "name": "mcp-retrieval-augmented-thinking",
+  "version": "1.0.0",
+  "description": "MCP server for retrieval augmented thinking and problem solving with Chain of Draft reasoning",
+  "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "build": "tsc && chmod +x dist/*.js",
-    "prepare": "npm run build",
-    "watch": "tsc --watch"
+    "start": "node index.js",
+    "test": "node test.js"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "0.5.0",
-    "chalk": "^5.3.0",
-    "yargs": "^17.7.2"
-  },
-  "devDependencies": {
-    "@types/node": "^20.11.0",
-    "@types/yargs": "^17.0.32",
-    "typescript": "^5.3.3"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stat-guy/retrieval-augmented-thinking.git"
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "openai": "^4.96.0",
+    "axios": "^1.8.3",
+    "dotenv": "^16.4.7"
   },
   "keywords": [
     "mcp",
     "model-context-protocol",
-    "ai",
+    "retrieval-augmented-thinking",
+    "chain-of-draft",
     "reasoning",
-    "thinking",
-    "retrieval-augmented",
-    "problem-solving",
-    "structured-thinking"
+    "ai"
   ],
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/stat-guy/retrieval-augmented-thinking/issues"
-  },
-  "homepage": "https://github.com/stat-guy/retrieval-augmented-thinking#readme"
+  "author": "stat-guy",
+  "license": "MIT"
 }
