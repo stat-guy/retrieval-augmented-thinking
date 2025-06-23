@@ -8,7 +8,7 @@ A context-aware reasoning system that orchestrates structured thought processes 
 
 ## Installation
 ```bash
-npm install -g /Users/kairi/rat-mcp/node-version
+npm install -g /Users/folder location/rat-mcp/node-version
 ```
 
 ## Claude Desktop Configuration
