@@ -1,33 +1,25 @@
 {
   "name": "@modelcontextprotocol/server-retrieval-augmented-thinking",
   "version": "0.1.0",
-  "description": "MCP server for retrieval augmented thinking and problem solving",
+  "description": "MCP server for retrieval augmented thinking and problem solving - Node.js implementation",
   "license": "MIT",
   "type": "module",
+  "main": "index.js",
   "bin": {
-    "mcp-server-retrieval-augmented-thinking": "dist/index.js"
+    "mcp-server-retrieval-augmented-thinking": "./index.js"
   },
   "files": [
-    "dist"
+    "index.js",
+    "package.json",
+    "README.md"
   ],
   "scripts": {
-    "build": "tsc && chmod +x dist/*.js",
-    "prepare": "npm run build",
-    "watch": "tsc --watch",
-    "test": "npm run test:basic && npm run test:tool",
-    "test:basic": "node test.js",
-    "test:tool": "node test-tool.js",
-    "test:all": "npm run build && npm test"
+    "start": "node index.js",
+    "build": "echo 'No build needed for pure JS'",
+    "test": "node test.js"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "0.5.0",
-    "chalk": "^5.3.0",
-    "yargs": "^17.7.2"
-  },
-  "devDependencies": {
-    "@types/node": "^20.11.0",
-    "@types/yargs": "^17.0.32",
-    "typescript": "^5.3.3"
+    "@modelcontextprotocol/sdk": "^1.12.3"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -46,7 +38,7 @@
     "problem-solving",
     "structured-thinking"
   ],
-  "author": "",
+  "author": "stat-guy",
   "bugs": {
     "url": "https://github.com/stat-guy/retrieval-augmented-thinking/issues"
   },

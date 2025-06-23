@@ -86,25 +86,22 @@ The tool returns responses in the following format:
 
 ```json
 {
-  "thoughtNumber": 1,
-  "totalThoughts": 3,
-  "nextThoughtNeeded": true,
-  "branches": [],
-  "thoughtHistoryLength": 1,
+  "thought_number": 1,
+  "total_thoughts": 3,
   "metrics": {
     "complexity": 0.4,
     "depth": 0.6,
     "quality": 0.6,
-    "impact": 0.5
+    "impact": 0.5,
+    "confidence": 0.7
   },
-  "confidence": 0.7,
   "analytics": {
-    "chainEffectiveness": 0.525,
-    "revisionImpact": 0,
-    "branchSuccessRate": 0,
-    "overallQuality": 0.525
+    "total_thoughts": 1,
+    "average_quality": 0.6,
+    "chain_effectiveness": 0.6
   },
-  "timestamp": 1708748400000
+  "next_thought_needed": true,
+  "visual_output": "formatted display"
 }
 ```
 
@@ -131,9 +128,9 @@ The server tracks various metrics:
 ### Visual Formatting
 
 Thoughts are displayed with visual formatting:
-- Main thoughts: 💭 Blue
-- Revisions: 🔄 Yellow
-- Branches: 🌿 Green
+- Main thoughts: 💭 
+- Revisions: 💭 (Revision)
+- Branches: 🌿 (Branch)
 
 ## Best Practices
 

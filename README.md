@@ -28,7 +28,7 @@ mcp-server-retrieval-augmented-thinking
 
 ### Programmatic Usage
 
-```typescript
+```javascript
 import { Server } from '@modelcontextprotocol/sdk/server';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio';
 
@@ -81,11 +81,14 @@ Analyzes thought patterns for:
 ## Development
 
 ```bash
-# Build
-npm run build
+# Install dependencies
+npm install
 
-# Watch mode
-npm run watch
+# Start the server
+npm start
+
+# Run tests
+npm test
 ```
 
 ## Contributing
