@@ -6,8 +6,10 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "build": "echo 'No build needed for pure JS'",
-    "test": "node test.js"
+    "build": "chmod +x index.js",
+    "test": "node test.js",
+    "postinstall": "chmod +x index.js || true",
+    "verify": "npx mcp-server-rat-node --help 2>/dev/null && echo 'Installation successful!' || echo 'Installation needs permission fix - run: chmod +x $(npm bin -g)/mcp-server-rat-node'"
   },
   "bin": {
     "mcp-server-rat-node": "./index.js"
