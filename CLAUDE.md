@@ -8,28 +8,20 @@ A context-aware reasoning system that orchestrates structured thought processes 
 
 ## Installation
 
-### Primary Method (Recommended)
-```bash
-npm install -g git+https://github.com/stat-guy/retrieval-augmented-thinking.git
-```
-
-### Alternative Method
+### Simple 3-Step Process
 ```bash
 git clone https://github.com/stat-guy/retrieval-augmented-thinking.git
 cd retrieval-augmented-thinking
 npm install -g .
 ```
 
-### Post-Installation Verification
-Always verify the installation before configuring Claude Desktop:
+### Verify Installation
+Test before configuring Claude Desktop:
 ```bash
 npx mcp-server-rat-node --help
 ```
 
-If you get "Permission denied" errors, run:
-```bash
-chmod +x $(npm bin -g)/mcp-server-rat-node
-```
+**Success indicator:** If you see `RAT MCP Server (Node.js) running on stdio`, installation is complete!
 
 ## Claude Desktop Configuration
 Add to `claude_desktop_config.json`:
@@ -43,6 +35,8 @@ Add to `claude_desktop_config.json`:
   }
 }
 ```
+
+Restart Claude Desktop after adding the configuration.
 
 ## Parameters
 
@@ -176,8 +170,5 @@ Add to `claude_desktop_config.json`:
 - When branching, provide both `branchFromThought` and `branchId`
 - Use descriptive, analytical language in thought content
 
-## Installation Troubleshooting
-If the tool fails to work after installation:
-1. Verify installation: `npx mcp-server-rat-node --help`
-2. Fix permissions: `chmod +x $(npm bin -g)/mcp-server-rat-node`
-3. Restart Claude Desktop after fixing permissions
+## Installation Notes
+The installation process includes automatic permission fixes via postinstall scripts. Most users will only need the simple 3-step process. Manual chmod commands are rarely needed as the system handles permissions automatically.
