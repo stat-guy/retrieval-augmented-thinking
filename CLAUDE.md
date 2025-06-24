@@ -20,6 +20,17 @@ cd retrieval-augmented-thinking
 npm install -g .
 ```
 
+### Post-Installation Verification
+Always verify the installation before configuring Claude Desktop:
+```bash
+npx mcp-server-rat-node --help
+```
+
+If you get "Permission denied" errors, run:
+```bash
+chmod +x $(npm bin -g)/mcp-server-rat-node
+```
+
 ## Claude Desktop Configuration
 Add to `claude_desktop_config.json`:
 ```json
@@ -164,3 +175,9 @@ Add to `claude_desktop_config.json`:
 - When using `isRevision: true`, always specify `revisesThought`
 - When branching, provide both `branchFromThought` and `branchId`
 - Use descriptive, analytical language in thought content
+
+## Installation Troubleshooting
+If the tool fails to work after installation:
+1. Verify installation: `npx mcp-server-rat-node --help`
+2. Fix permissions: `chmod +x $(npm bin -g)/mcp-server-rat-node`
+3. Restart Claude Desktop after fixing permissions
