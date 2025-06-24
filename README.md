@@ -4,12 +4,7 @@ Retrieval Augmented Thinking MCP Server - A reasoning tool that processes struct
 
 ## Installation
 
-### Primary Method (Recommended)
-```bash
-npm install -g git+https://github.com/stat-guy/retrieval-augmented-thinking.git
-```
-
-### Alternative Method
+### Simple 3-Step Process
 ```bash
 git clone https://github.com/stat-guy/retrieval-augmented-thinking.git
 cd retrieval-augmented-thinking
@@ -17,15 +12,12 @@ npm install -g .
 ```
 
 ### Verify Installation
-After installation, verify it works:
-```bash
-npm run verify
-```
-
-Or test manually:
+Test that the installation worked:
 ```bash
 npx mcp-server-rat-node --help
 ```
+
+**Success indicator:** If you see `RAT MCP Server (Node.js) running on stdio`, your installation is ready!
 
 ## Claude Desktop Configuration
 
@@ -44,6 +36,8 @@ Add to your Claude Desktop configuration file:
   }
 }
 ```
+
+After adding the configuration, restart Claude Desktop to load the RAT server.
 
 ## Usage
 
@@ -119,50 +113,35 @@ The server provides a single `rat` tool for processing structured thoughts:
 
 ## Troubleshooting
 
-### Permission Denied Error
-If you see "Permission denied" when Claude Desktop tries to run the server:
+### If Installation Fails
+The installation process includes automatic permission fixes. If you encounter issues:
 
-```bash
-# Fix permissions manually
-chmod +x ~/.npm-global/bin/mcp-server-rat-node
-```
+1. **Ensure you have Node.js and npm installed**
+2. **Try the alternative installation method:**
+   ```bash
+   npm install -g git+https://github.com/stat-guy/retrieval-augmented-thinking.git
+   ```
+3. **For rare permission issues:**
+   ```bash
+   chmod +x $(npm bin -g)/mcp-server-rat-node
+   ```
 
-Or find your global npm bin directory and fix permissions:
-```bash
-chmod +x $(npm bin -g)/mcp-server-rat-node
-```
-
-### Alternative Installation Fix
-If permissions keep causing issues, try this complete reinstall:
-```bash
-npm uninstall -g mcp-server-rat-node
-npm install -g git+https://github.com/stat-guy/retrieval-augmented-thinking.git
-chmod +x $(npm bin -g)/mcp-server-rat-node
-```
-
-### Installation Verification
-Before configuring Claude Desktop, always verify the installation:
+### Verification Steps
+Before configuring Claude Desktop, always verify:
 ```bash
 npx mcp-server-rat-node --help
 ```
 
-If this command works without errors, your installation is ready for Claude Desktop.
-
-### Common Issues
-- **ENOENT errors**: Ensure you have Node.js and npm installed
-- **Permission errors**: Run the chmod commands above
-- **Path issues**: Check that `$(npm bin -g)` returns a valid directory
+If this shows "RAT MCP Server (Node.js) running on stdio", you're ready to configure Claude Desktop.
 
 ## Testing
 
 Run the test suite:
-
 ```bash
 npm test
 ```
 
 Test tool execution:
-
 ```bash
 node test-tool.js
 ```
