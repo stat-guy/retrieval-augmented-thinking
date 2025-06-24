@@ -16,6 +16,17 @@ cd retrieval-augmented-thinking
 npm install -g .
 ```
 
+### Verify Installation
+After installation, verify it works:
+```bash
+npm run verify
+```
+
+Or test manually:
+```bash
+npx mcp-server-rat-node --help
+```
+
 ## Claude Desktop Configuration
 
 Add to your Claude Desktop configuration file:
@@ -108,17 +119,39 @@ The server provides a single `rat` tool for processing structured thoughts:
 
 ## Troubleshooting
 
-### Installation Issues
-If you encounter `ENOENT` errors during installation:
-1. Ensure you have Node.js and npm installed
-2. Try the alternative installation method using `git clone`
-3. Check that you have internet access for GitHub downloads
+### Permission Denied Error
+If you see "Permission denied" when Claude Desktop tries to run the server:
 
-### Verification
-After installation, verify it works:
+```bash
+# Fix permissions manually
+chmod +x ~/.npm-global/bin/mcp-server-rat-node
+```
+
+Or find your global npm bin directory and fix permissions:
+```bash
+chmod +x $(npm bin -g)/mcp-server-rat-node
+```
+
+### Alternative Installation Fix
+If permissions keep causing issues, try this complete reinstall:
+```bash
+npm uninstall -g mcp-server-rat-node
+npm install -g git+https://github.com/stat-guy/retrieval-augmented-thinking.git
+chmod +x $(npm bin -g)/mcp-server-rat-node
+```
+
+### Installation Verification
+Before configuring Claude Desktop, always verify the installation:
 ```bash
 npx mcp-server-rat-node --help
 ```
+
+If this command works without errors, your installation is ready for Claude Desktop.
+
+### Common Issues
+- **ENOENT errors**: Ensure you have Node.js and npm installed
+- **Permission errors**: Run the chmod commands above
+- **Path issues**: Check that `$(npm bin -g)` returns a valid directory
 
 ## Testing
 
